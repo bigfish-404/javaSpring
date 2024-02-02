@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <!--  使用spring来创建对象，在Spring中都称为Bean，对象是由spring创建的，对象的属性是由spring容器设置的===》这个过程就叫控制反转
+    bean等于一个对象
+    正常是 类型 变量名 = new 类型（）；
+
+    用bean以后
+    id=变量名
+    class=new对象
+    property相当于给对象中的属性设置一个值（value）
+
+    如果使用value：具体的值，是基本数据类型
+    使用ref：引用Spring容器创建好的对象
+    name也是别名
+    -->
+    <bean id="hello" class="com.Pojo.Hello" name="hello3">
+        <property name="str" value="Spring"/>
+    </bean>
+
+    <!--取别名的作用-->
+    <alias name="hello" alias="hello2"/>
+
+    <!--一般是 用于团队开发使用，将多个配置文件导入导入合并为一个-->
+    <!--<import resource=""-->
+</beans>
